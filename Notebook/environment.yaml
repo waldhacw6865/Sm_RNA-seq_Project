@@ -4,16 +4,16 @@ channels:
   - bioconda
   - defaults
 dependencies:
-	- fastqc
-	- cutadapt
-	- multiqc
-	- STAR
-	- samtools
-	- qualimap
-	- ipykernel
-	- subread
-	- picard
-	- bioconductor-deseq2
-	- r-tidyverse
-	- r-broom
-	- r-languageserver
+  - fastqc
+  - cutadapt
+  - multiqc
+  - STAR
+  - samtools
+  - qualimap
+  - ipykernel
+  - subread
+  - picard
+  - bioconductor-deseq2
+  - r-tidyverse
+  - r-broom
+  - r-languageserver
