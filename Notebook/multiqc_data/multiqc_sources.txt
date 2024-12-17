@@ -1,0 +1,33 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	genome | fastq | qc | Int-01_S42_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Int-01_S42_L005_R1_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Int-01_S42_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Int-01_S42_L005_R2_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Liv-04_S41_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Liv-04_S41_L005_R2_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Liv-02_S39_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Liv-02_S39_L005_R2_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Liv-02_S39_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Liv-02_S39_L005_R1_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Int-03_S44_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Int-03_S44_L005_R2_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Int-03_S44_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Int-03_S44_L005_R1_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Liv-04_S41_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Liv-04_S41_L005_R1_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Int-02_S43_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Int-02_S43_L005_R1_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Int-02_S43_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Int-02_S43_L005_R2_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Int-04_S45_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Int-04_S45_L005_R1_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Int-04_S45_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Int-04_S45_L005_R2_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Liv-01_S38_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Liv-01_S38_L005_R2_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Liv-01_S38_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Liv-01_S38_L005_R1_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Liv-03_S40_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Liv-03_S40_L005_R1_001_fastqc.zip
+FastQC	all_sections	genome | fastq | qc | Liv-03_S40_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/genome/fastq/qc/Liv-03_S40_L005_R2_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Liv-03_S40_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Liv-03_S40_L005_R2_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Liv-03_S40_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Liv-03_S40_L005_R1_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Int-01_S42_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Int-01_S42_L005_R2_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Int-01_S42_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Int-01_S42_L005_R1_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Int-03_S44_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Int-03_S44_L005_R2_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Int-03_S44_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Int-03_S44_L005_R1_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Liv-02_S39_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Liv-02_S39_L005_R1_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Liv-02_S39_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Liv-02_S39_L005_R2_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Int-02_S43_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Int-02_S43_L005_R2_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Int-02_S43_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Int-02_S43_L005_R1_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Int-04_S45_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Int-04_S45_L005_R1_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Int-04_S45_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Int-04_S45_L005_R2_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Liv-01_S38_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Liv-01_S38_L005_R1_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Liv-01_S38_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Liv-01_S38_L005_R2_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Liv-04_S41_L005_R2_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Liv-04_S41_L005_R2_001_fastqc.zip
+FastQC	all_sections	trimmed_data | qc | Liv-04_S41_L005_R1_001	/data/users/waldhacw6865/Sm_Mira_IvT/Notebook/trimmed_data/qc/Liv-04_S41_L005_R1_001_fastqc.zip
