@@ -82,7 +82,7 @@ volcano_plot <- volcano_data |>
     geom_hline(yintercept = -log10(0.05)) +
     geom_vline(xintercept = 2) +
     geom_vline(xintercept = -2) +
-    theme_minimal()
+    theme_grey()
 volcano_plot
 
 ggsave("Notebook/plot/volcano.png", volcano_plot)
