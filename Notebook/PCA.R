@@ -1,18 +1,20 @@
+library(tidyverse)
+library(DESeq2)
 
-counts_df <- read_tsv("/data/users/waldhacw6865/Sm_RNA-seq_Project/Notebook/counts/star_counts.tsv",
+counts_df <- read_tsv("/data/users/waldhacw6865/Sm_RNA-seq_Project/Notebook/counts/counts.tsv",
                       comment = "#") |>
              mutate(across(where(is.numeric), as.integer))
 
 counts_summary <- counts_df |>
-    select(Geneid, contains('star.bam')) |>
-    rename_with(~str_remove(., "/data/users/waldhacw6865/Sm_RNA-seq_Project/Notebook/dedup/star.bam:"), everything()) |>
+    select(Geneid, contains('.bam')) |>
+    rename_with(~str_remove(., "/dedup/star.bam:"), everything()) |>
     rowwise() |>
     mutate(total_counts = sum(c_across(where(is.numeric)), na.rm = T)) |>
     filter(total_counts >= 10)
 
 sample_summary <- counts_df |>
-    select(Geneid, contains('/data/users/waldhacw6865/Sm_RNA-seq_Project/Notebook/dedup/star.bam:')) |>
-    rename_with(~str_remove(., "/data/users/waldhacw6865/Sm_RNA-seq_Project/Notebook/dedup/star.bam:"), everything()) |>
+    select(Geneid, contains('.bam')) |>
+    rename_with(~str_remove(., "/dedup/star.bam:"), everything()) |>
     pivot_longer(-Geneid, names_to = 'sample', values_to = 'count') |>
     filter(count > 0) |>
     group_by(Geneid) |>
@@ -54,18 +56,9 @@ pca_fit
 
 library(broom)
 
-pca_fit |>
-  augment(t(counts_m)) |>
-  dplyr::rename(sample = .rownames) |>
-  separate(sample, into = c('tissue', 'age'), sep = '_') |>
-  mutate(age = str_remove(age, '[0-9]')) |>
-  ggplot(aes(.fittedPC1, .fittedPC2, color = tissue, shape = age)) + 
-  geom_point(size = 4)
-
-  metadata <- data.frame(sample_id = colnames(counts_m)) |>
-    mutate(tissue = str_sub(sample_id, 1, 3),
-           age = str_sub(sample_id, 5, 6),
-           rep = str_sub(sample_id, 7))
+metadata <- data.frame(sample_id = colnames(counts_m)) |>
+    mutate(tissue = str_sub(sample_id, 12, 14),
+           rep = str_sub(sample_id, 17, 17))
 rownames(metadata) <- metadata$sample_id
 metadata <- select(metadata, -sample_id)
 metadata
@@ -81,32 +74,7 @@ dds
 res <- results(dds)
 res
 
-as_tibble(res, rownames = 'gene_id') |>
-    filter(gene_id == 'Smp_329140')
-
-filter(counts_filt, Geneid == 'Smp_329140')
-
-as_tibble(res, rownames = 'gene_id') |>
-    filter(gene_id == 'Smp_333930')
-
-metadata2 <- metadata |>
-    mutate(tissue_age = str_c(tissue, "_", age)) |>
-    select(tissue_age, rep)
-metadata2
-
-dds2 <- DESeqDataSetFromMatrix(countData = counts_m,
-                               colData = metadata2,
-                               design = ~ tissue_age)
-dds2 <- DESeq(dds2)
-dds2
-
-LIV_ma_vs_INT_ma <- results(dds2, contrast = c('tissue_age', 'LIV_ma', 'INT_ma'))
-LIV_ma_vs_INT_ma
-
-as_tibble(LIV_ma_vs_INT_ma, rownames = 'gene_id') |>
-    filter(gene_id == 'Smp_333930')
-
-volcano_data <- as_tibble(LIV_ma_vs_INT_ma, rownames = 'gene_id')
+volcano_data <- as_tibble(res, rownames = 'gene_id')
 
 volcano_plot <- volcano_data |> 
     ggplot(aes(x = log2FoldChange, y = -log10(padj))) +
@@ -117,23 +85,11 @@ volcano_plot <- volcano_data |>
     theme_minimal()
 volcano_plot
 
+ggsave("Notebook/plot/volcano.png", volcano_plot)
+
 vsd <- vst(dds)
 vsd
 
-plotPCA(vsd, intgroup = c("tissue", "age"))
+PCA <- plotPCA(vsd, intgroup = c("tissue"))
 
-vsd_dists <- dist(t(assay(vsd)))
-
-vsd_dists_df <- as.matrix(vsd_dists) |>
-    as_tibble(rownames = 'sample')
-
-vsd_dist_plot <- vsd_dists_df |>
-    pivot_longer(-sample, names_to = 'comp', values_to = 'dist') |>
-    ggplot(aes(x = sample, y = comp, fill = dist)) +
-    geom_tile() +
-    scale_fill_viridis_c() +
-    coord_equal() +
-    NULL
-vsd_dist_plot
-
-
+ggsave("Notebook/plot/PCA.png")

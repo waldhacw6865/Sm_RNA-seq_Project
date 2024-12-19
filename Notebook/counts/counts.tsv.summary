@@ -1,0 +1,15 @@
+Status	dedup/star/Int-01_S42_L005.bam:Int-01_S42_L005	dedup/star/Int-02_S43_L005.bam:Int-02_S43_L005	dedup/star/Int-03_S44_L005.bam:Int-03_S44_L005	dedup/star/Int-04_S45_L005.bam:Int-04_S45_L005	dedup/star/Liv-01_S38_L005.bam:Liv-01_S38_L005	dedup/star/Liv-02_S39_L005.bam:Liv-02_S39_L005	dedup/star/Liv-03_S40_L005.bam:Liv-03_S40_L005	dedup/star/Liv-04_S41_L005.bam:Liv-04_S41_L005
+Assigned	3238124	892134	2202488	3399765	1231990	2535487	537906	2444960
+Unassigned_Unmapped	110775683	144249183	124852540	163369258	192661986	122770474	199882285	121596199
+Unassigned_Read_Type	0	0	0	0	0	0	0	0
+Unassigned_Singleton	0	0	0	0	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0	0	0
+Unassigned_Duplicate	7244801	4334583	4401039	5899167	1679001	9645388	422383	6695344
+Unassigned_MultiMapping	0	0	0	0	0	0	0	0
+Unassigned_Secondary	0	0	0	0	0	0	0	0
+Unassigned_NonSplit	0	0	0	0	0	0	0	0
+Unassigned_NoFeatures	2189853	786230	932776	1323285	912320	1544174	246561	997828
+Unassigned_Overlapping_Length	0	0	0	0	0	0	0	0
+Unassigned_Ambiguity	614173	267472	414362	748936	153644	720389	41957	431551
